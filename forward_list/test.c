@@ -78,7 +78,7 @@ void erase(node **head)
 {
     if(!*head)
     {
-		puts("List is empty."); 
+	puts("List is empty."); 
         return;
     }
     node *tmp = NULL;
