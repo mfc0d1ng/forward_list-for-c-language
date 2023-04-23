@@ -23,7 +23,7 @@ void pop_front(node **head)
 {
     if(!*head)
     {
-		puts("List is empty."); 
+	puts("List is empty."); 
         return;
     }
     struct node *tmp = *head;
@@ -67,10 +67,10 @@ int is_empty(node *head)
 void display(struct node *head)
 {
     for (struct node *it = head; it; it = it->next)
-	{
-		printf("%i ", it->data);
-	}
-	puts(""); 
+    {
+	printf("%i ", it->data);
+    }
+    puts(""); 
 }
 
 
@@ -83,11 +83,11 @@ void erase(node **head)
     }
     node *tmp = NULL;
     for (node *it = *head; it; )
-	{
-        tmp = it;
+    {
+    	tmp = it;
         it = it->next; 
         free(tmp);
-	}
+    }
     *head = NULL; 
 }
 
