@@ -9,7 +9,7 @@ int main()
 	
 	for (size_t i = 0; i < 1000000; i++)
 	{
-		push_front(&stack, i); 
+	    push_front(&stack, i); 
 	}
 	
 	/* reverse(&stack); */
