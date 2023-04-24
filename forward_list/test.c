@@ -66,7 +66,7 @@ int is_empty(node *head)
 
 void display(node *head)
 {
-    for (struct node *it = head; it; it = it->next)
+    for (node *it = head; it; it = it->next)
     {
 	printf("%i ", it->data);
     }
