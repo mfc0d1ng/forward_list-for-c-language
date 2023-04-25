@@ -2,16 +2,18 @@
 #include <stdlib.h>
 #include "test.h"
 
-static const unsigned char node_size = sizeof(node);
+#define exit_msg          "Out of memory...Program terminated." 
+#define exit_failure       0x1
 
+static const unsigned char node_size = sizeof(node);
 
 void push_front(node **head, int data)
 {
     node *new_node = (node *) malloc(node_size);
     if(!new_node)
     {
-        puts("Out of memory...Program terminated.");
-        return; 
+        puts(exit_msg); 
+        exit(exit_failure); 
     }
     new_node->data = data;
     new_node->next = *head; 
