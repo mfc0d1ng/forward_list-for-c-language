@@ -42,7 +42,8 @@ int front(node *head)
 
 void reverse(node **head)
 {
-    node *prev = NULL, *next = NULL;
+    node *prev = NULL; 
+    node *next = NULL;
     while (*head) 
     {
         next = (*head)->next;
