@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include "test.h"
 
+#define empty_list        "List is empty."
 #define exit_msg          "Out of memory...Program terminated." 
 #define exit_failure       0x1
 
 static const unsigned char node_size = sizeof(node);
+
 
 void push_front(node **head, int data)
 {
@@ -25,7 +27,7 @@ void pop_front(node **head)
 {
     if(!*head)
     {
-	puts("List is empty."); 
+	puts(empty_list); 
         return;
     }
     struct node *tmp = *head;
@@ -82,7 +84,7 @@ void erase(node **head)
 {
     if(!*head)
     {
-	puts("List is empty."); 
+	puts(empty_list); 
         return;
     }
     node *tmp = NULL;
